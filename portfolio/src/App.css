@@ -4,6 +4,9 @@
 }
 
 .main-nav{
+  margin-top: 1.5rem;
+  margin-left: 5%;
+  margin-right: 10%;
   min-width: 200px;
   font-weight: 700;
   font-size: 1.2rem;
@@ -11,16 +14,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: nowrap;
   overflow: hidden;
-}
-
-.main-nav:first-child {
-  margin-left: 7rem;
 }
 
 .right-nav{
   padding-left: 1rem;
-  margin-right: 10rem;
 }
 
 .right-nav > ul{
