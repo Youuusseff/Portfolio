@@ -1,14 +1,15 @@
  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 .App{
   font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 2px;
 }
 
 .main-nav{
   margin-top: 1.5rem;
   margin-left: 5%;
   margin-right: 10%;
-  min-width: 200px;
   font-weight: 700;
+  color: rgb(87, 92, 95);
   font-size: 1.2rem;
   list-style-type: none;
   display: flex;
@@ -19,7 +20,7 @@
 }
 
 .right-nav{
-  padding-left: 1rem;
+  padding-left: 0.5rem;
 }
 
 .right-nav > ul{
@@ -30,3 +31,89 @@
 .right-nav > ul > li {
   padding-left: 2rem;
 }
+@media(max-width:730px){
+  .main-nav{
+    overflow: visible;
+  }
+}
+.img-pdp{
+  width: 23rem;
+  height: 23rem;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.Home{
+  margin-top: 6rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.pdp-wrapper{
+  margin-right: 5rem;
+  width: 30%;
+}
+@media screen and (max-width:1217px) {
+  .Home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pdp-wrapper{
+    width: 25%;
+    margin-bottom: 3rem;
+  }
+  .description{
+    margin-left: 50%;
+  }
+}
+.description{
+  width: 35%;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: center;
+}
+.description > p, h3, h1, h4{
+}
+
+.description > p{
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-style: bold;
+  color: rgb(87, 92, 95);
+}
+.description > h1{
+  font-weight: 700;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 1.2rem;
+  font-size: 2.3rem;
+  letter-spacing: 5px;
+}
+.description > h3 {
+  color: rgb(87, 92, 95);
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+@media screen and (max-width:1217px) {
+  .Home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pdp-wrapper{
+    width: 25%;
+    margin-bottom: 3rem;
+  }
+  .description{
+    margin-left: 15%;
+  }
+}
+
