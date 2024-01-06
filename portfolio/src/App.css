@@ -134,6 +134,7 @@ nav{
 @media screen and (max-width:1217px) {
   .main-nav{
     font-size: 0.8rem;
+    padding-left: 1.5rem;
   }
   nav{
     margin-bottom: 3rem;
