@@ -51,34 +51,6 @@ nav{
   
 }
 
-@media screen and (max-width: 950px) {
-  .right-nav.responsive {
-    position: relative;
-  }
-  .right-nav.responsive ul {
-    display: flex;
-    flex-direction: column;
-  }
-  .right-nav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .right-nav.responsive li {
-    display: block;
-    float: none;
-    z-index: 1;
-  }
-  .right-nav.responsive .dropdown-item{
-    padding: 0.5rem;
-    margin-right: 2rem;
-    border-bottom: 1px solid black;
-  }
-  .right-nav.responsive .dropdown-item:hover{
-    background-color: rgba(132, 135, 137, 0.7);
-  }
-}
-
 .img-pdp{
   width: 23rem;
   height: 23rem;
@@ -131,13 +103,14 @@ nav{
   letter-spacing: 1px;
 }
 
-@media screen and (max-width:1217px) {
+@media screen and (max-width:600px) {
   .main-nav{
     font-size: 0.8rem;
     padding-left: 1.5rem;
   }
   nav{
     margin-bottom: 3rem;
+    overflow: visible;
   }
   .Home{
     display: flex;
@@ -182,9 +155,67 @@ nav{
     margin-left: 0;
   }
 }
-@media screen and (min-width:450px) and (max-width:1215px) {
+
+@media screen and (max-width: 950px) {
+  .navbar{
+    position: relative;
+    margin-right: 0;
+  }
+  .right-nav.responsive {
+    position: absolute;
+    overflow: auto;
+    left: 48%;
+    z-index: 99;
+  }
+  .right-nav.responsive ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .right-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .right-nav.responsive li {
+    display: block;
+    float: none;
+  }
+  .right-nav.responsive .dropdown-item{
+    padding: 0.5rem;
+    margin-right: 2rem;
+    border-bottom: 1px solid black;
+    position: relative;
+    bottom: 20%;
+  }
+  .right-nav.responsive .dropdown-item:hover{
+    background-color: rgba(132, 135, 137, 0.7);
+  }
+}
+@media screen and (min-width:500px) and (max-width:1215px) {
+  .main-nav{
+    margin-right: 0;
+  }
+  .right-nav.responsive {
+    position: absolute;
+    overflow: auto;
+    left: 70%;
+    z-index: 99;
+  }
   .pdp-wrapper{
-    margin-left: 4rem;
+    margin-right: 5rem;
+  }  
+  .description{
+    margin-left: 5rem;
+  }
+}
+@media screen and (min-width:400px) and (max-width:600px) {
+  .right-nav.responsive {
+    position: absolute;
+    overflow: auto;
+    left: 58%;
+    z-index: 99;
+  }
+  .pdp-wrapper{
+    margin-left: 8rem;
   }  
 }
-

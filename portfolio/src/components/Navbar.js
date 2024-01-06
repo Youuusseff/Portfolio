@@ -16,7 +16,7 @@ export default function Navbar() {
         <ul className='main-nav'>
           <li>Youssef Benomrane</li>
           <li className='right-nav' id='my-nav'>
-            <ul>
+            <ul id='dropdown' className='dropdown'>
               <li className='dropdown-item'>Home</li>
               <li className='dropdown-item'>About</li>
               <li className='dropdown-item'>Projects</li>
