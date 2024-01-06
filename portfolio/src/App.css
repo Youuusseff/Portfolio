@@ -13,7 +13,7 @@
   margin-right: 10%;
   font-weight: 700;
   color: rgb(87, 92, 95);
-  font-size: 1.2=rem;
+  font-size: 1.2rem;
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -22,10 +22,8 @@
   overflow: hidden;
 }
 nav{
-  min-height: 6rem;
-  height: fit-content;
+  margin-bottom: 8rem;
 }
-
 .icon{
   display: none;
 }
@@ -54,7 +52,6 @@ nav{
 }
 
 @media screen and (max-width: 950px) {
-  
   .right-nav.responsive {
     position: relative;
   }
@@ -70,6 +67,7 @@ nav{
   .right-nav.responsive li {
     display: block;
     float: none;
+    z-index: 1;
   }
   .right-nav.responsive .dropdown-item{
     padding: 0.5rem;
@@ -94,7 +92,7 @@ nav{
   width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -132,19 +130,60 @@ nav{
   font-size: 2rem;
   letter-spacing: 1px;
 }
+
 @media screen and (max-width:1217px) {
+  .main-nav{
+    font-size: 0.8rem;
+  }
+  nav{
+    margin-bottom: 3rem;
+  }
   .Home{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    flex-wrap: nowrap;
   }
   .pdp-wrapper{
-    width: 25%;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+  }
+  .img-pdp{
+    width: 14rem;
+    height: 14rem;
   }
   .description{
-    margin-left: 15%;
+    width: 70%;
   }
+  .description > p{
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .description > h1{
+    font-weight: 700;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0rem;
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+  }
+  .description > h3 {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  .description> h4{
+      white-space: nowrap;
+  }
+  .main-nav{
+    margin-left: 0;
+  }
+}
+@media screen and (min-width:450px) and (max-width:1215px) {
+  .pdp-wrapper{
+    margin-left: 4rem;
+  }  
 }
 
