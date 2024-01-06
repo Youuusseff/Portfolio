@@ -2,21 +2,32 @@
 .App{
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 2px;
+  width: 100%;
+  margin: 0;
 }
 
 .main-nav{
+  width: 85%;
   margin-top: 1.5rem;
   margin-left: 5%;
   margin-right: 10%;
   font-weight: 700;
   color: rgb(87, 92, 95);
-  font-size: 1.2rem;
+  font-size: 1.2=rem;
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
   overflow: hidden;
+}
+nav{
+  min-height: 6rem;
+  height: fit-content;
+}
+
+.icon{
+  display: none;
 }
 
 .right-nav{
@@ -31,11 +42,45 @@
 .right-nav > ul > li {
   padding-left: 2rem;
 }
-@media(max-width:730px){
-  .main-nav{
-    overflow: visible;
+@media(max-width:950px){
+  .dropdown-item{
+    display: none;
+  }
+
+  .icon{
+    display: block;
+  }
+  
+}
+
+@media screen and (max-width: 950px) {
+  
+  .right-nav.responsive {
+    position: relative;
+  }
+  .right-nav.responsive ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .right-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .right-nav.responsive li {
+    display: block;
+    float: none;
+  }
+  .right-nav.responsive .dropdown-item{
+    padding: 0.5rem;
+    margin-right: 2rem;
+    border-bottom: 1px solid black;
+  }
+  .right-nav.responsive .dropdown-item:hover{
+    background-color: rgba(132, 135, 137, 0.7);
   }
 }
+
 .img-pdp{
   width: 23rem;
   height: 23rem;
@@ -57,21 +102,7 @@
   margin-right: 5rem;
   width: 30%;
 }
-@media screen and (max-width:1217px) {
-  .Home{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .pdp-wrapper{
-    width: 25%;
-    margin-bottom: 3rem;
-  }
-  .description{
-    margin-left: 50%;
-  }
-}
+
 .description{
   width: 35%;
   padding-left: 0;
