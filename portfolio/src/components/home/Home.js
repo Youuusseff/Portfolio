@@ -1,5 +1,6 @@
 import React from 'react'
-import pdp from '../images/pdp.jpeg'
+import pdp from './images/pdp.jpeg'
+import './App.css';
 
 export default function Home() {
   return (

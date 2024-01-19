@@ -1,4 +1,6 @@
 import React from 'react'
+import './App.css';
+
 export default function Navbar() {
   function dropDown() {
     var x = document.getElementById("my-nav");
