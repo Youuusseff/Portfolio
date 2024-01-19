@@ -12,8 +12,8 @@ function App() {
     if (togglePage != "welcome"){
       gsap.set(".App", {opacity:0});
       const tl = gsap.timeline();
-      tl.to(".App", {duration: 2, opacity: 1, scale: 1.06});
-      tl.to(".App", {duration : 2, scale: 1});}
+      tl.to(".App", {duration: 1, opacity: 1, scale: 1.06});
+      tl.to(".App", {duration : 0.5, scale: 1});}
   },[togglePage]);
   function currentComponent(togglePage){
     if(togglePage == "welcome"){
