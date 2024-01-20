@@ -13,6 +13,10 @@ export default function Home() {
         <h1>Youssef Benomrane</h1>
         <h3>Frontend Developer</h3>
         <h4>Tech Stack : React | SpringBoot </h4>
+        <div className='buttons'>
+          <a href='' target='_blank'><button class="button-c" role="button">Contact Me</button></a>
+          <a href='https://github.com/Youuusseff' target='_blank'><button class="button-l" role="button">LinkedIn</button></a>
+        </div>
       </div>
     </div>
   )
