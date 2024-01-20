@@ -215,14 +215,14 @@ nav{
     margin: 0;
   }
   .button-c{
-    width: 55% !important;
+    width: 52% !important;
     margin: 1rem !important;
     text-wrap: nowrap !important;
     margin-left: 0;
     
   }
   .button-l{
-    width: 31%;
+    width: 35%;
     margin: 0 !important;
   }
 }
