@@ -213,17 +213,27 @@ nav{
   }
   .buttons{
     margin: 0;
+    height: 0.5rem;
   }
   .button-c{
+    text-align: center;
     width: 55% !important;
     margin: 1rem !important;
     text-wrap: nowrap !important;
     margin-left: 0;
+    min-height: 0.5rem !important;
+    height: 0.8rem !important;
+    padding-bottom: 2rem !important;
+    padding-top: 0.5rem !important;
     
   }
   .button-l{
     width: 32%;
     margin: 0 !important;
+    min-height: 0.5rem !important;
+    height: 1.5rem !important;
+    padding-top: 1.05rem !important;
+    padding-bottom: 1.2rem !important;
   }
 }
 @media screen and (min-width:500px) and (max-width:1215px) {
