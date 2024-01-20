@@ -215,7 +215,7 @@ nav{
     margin: 0;
   }
   .button-c{
-    width: 7.8rem !important;
+    width: 52% !important;
     overflow: hidden;
     margin: 1rem !important;
     padding-right: 6rem !important;
@@ -224,7 +224,7 @@ nav{
     
   }
   .button-l{
-    width: 6rem;
+    width: 33%;
     margin: 0 !important;
   }
 }
