@@ -215,17 +215,16 @@ nav{
     margin: 0;
   }
   .button-c{
-    width: 52% !important;
+    width: 55% !important;
     overflow: hidden;
     margin: 1rem !important;
     padding-right: 6rem !important;
     text-wrap: nowrap !important;
     margin-left: 0;
-    background-color: red !important;
     
   }
   .button-l{
-    width: 33%;
+    width: 31%;
     margin: 0 !important;
   }
 }
