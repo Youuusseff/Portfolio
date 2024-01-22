@@ -5,6 +5,7 @@ import Home from './components/home/Home';
 import WelcomeAnimation from './components/home/welcome';
 import { useState } from 'react';
 import gsap from 'gsap';
+import About from './components/home/About';
 
 function App() {
   const [togglePage, changePage] = useState("welcome")
@@ -20,11 +21,15 @@ function App() {
       return (<WelcomeAnimation changePage = {changePage}/>);
     }
     else{
-      return (
-        <div className="App">
-          <Navbar/>
-          <Home/>
-        </div>);
+      if(togglePage == "about"){
+        return(<About/>)
+      }
+      else{
+        return (
+          <div className="App">
+            <Navbar/>
+            <Home changePage = {changePage}/>
+          </div>);}
     }
   }
   return (

@@ -33,8 +33,7 @@ const WelcomeAnimation = (props) => {
     const tl = gsap.timeline();
     tl.to("#text-container", { duration: 2, opacity: 1, scale: 1.5 })
       .to("#particle-container", { duration: 2, opacity: 1, scale: 1.5, onComplete: startParticleAnimation }, '-=1') // Overlap the particle animation with text animation
-      .to("#text-container", { duration : 3, opacity: 0, scale: 0.5})
-      .to("#particle-container", {duration: 1,y: "+=10" , opacity: 0 , scale: 0.2 , onComplete: ()=>{props.changePage('home')}}, '-=1');
+      .to(["#text-container","#particle-container"], { duration : 3, opacity: 0, scale: 0.5,onComplete: ()=>{props.changePage('home')}});
   }, []); // Empty dependency array to run the effect only once when the component mounts
 
   const startParticleAnimation = () => {

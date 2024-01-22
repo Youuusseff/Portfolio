@@ -218,7 +218,7 @@ nav{
   .button-c{
     text-align: center;
     width: 55% !important;
-    margin: 1rem !important;
+    margin: 0.5rem !important;
     text-wrap: nowrap !important;
     margin-left: 0;
     min-height: 0.5rem !important;
@@ -234,6 +234,14 @@ nav{
     height: 1.5rem !important;
     padding-top: 1.05rem !important;
     padding-bottom: 1.2rem !important;
+  }
+  .transition-button{
+    font-size: 1rem !important;
+    height: 2.5rem !important;
+    position: relative;
+    letter-spacing: 0 !important;
+    top: 44px;
+    margin-top: 1.5rem !important;
   }
 }
 @media screen and (min-width:500px) and (max-width:1215px) {
@@ -279,10 +287,7 @@ nav{
   font-weight: 600;
   line-height: normal;
   margin: 0;
-  min-height: 60px;
-  min-width: 0;
   outline: none;
-  padding: 16px 24px;
   text-align: center;
   text-decoration: none;
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
@@ -291,6 +296,8 @@ nav{
   touch-action: manipulation;
   text-wrap: nowrap;
   will-change: transform;
+  width: 7rem;
+  height: 2.8rem;
 }
 .button-l {
   align-items: center;
@@ -319,6 +326,8 @@ nav{
   -webkit-user-select: none;
   touch-action: manipulation;
   box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+  width: 6rem;
+  height: 2.3rem;
 }
 
 .button-l:hover {
@@ -337,4 +346,46 @@ nav{
 .button-c:active {
   box-shadow: none;
   transform: translateY(0);
+}
+.transition-button{
+  border-radius: 10px;
+  padding: 0.6rem;
+  background: transparent;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  letter-spacing: 0.3rem;
+  animation: scale 2s  infinite;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 40px 15px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+.transition-button:hover{
+  animation-play-state: paused;
+  animation: colorChange 1.5s;
+  background-color: black;
+  color: white;
+}
+
+@keyframes colorChange {
+  0%{
+    background-color: white;
+    color: black;
+  }
+  100%{
+    background-color: black;
+    color: white;
+  }
+}
+@keyframes scale {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.03);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
