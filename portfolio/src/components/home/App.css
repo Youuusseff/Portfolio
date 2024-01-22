@@ -240,8 +240,11 @@ nav{
     height: 2.5rem !important;
     position: relative;
     letter-spacing: 0 !important;
-    top: 44px;
+    top: 40px;
     margin-top: 1rem !important;
+  }
+  .description{
+    margin-bottom: 0 !important;
   }
 }
 @media screen and (min-width:500px) and (max-width:1215px) {
