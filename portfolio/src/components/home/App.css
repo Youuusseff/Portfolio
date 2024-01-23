@@ -240,8 +240,10 @@ nav{
     padding-bottom: 1.2rem !important;
   }
   .transition-button{
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
     height: 3rem !important;
+    padding: 0 !important;
+    width: 10rem;
     letter-spacing: 0 !important;
     margin-top: 1rem !important;
     color: black !important;
