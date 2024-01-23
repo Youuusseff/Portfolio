@@ -5,8 +5,25 @@ import gsap from 'gsap';
 
 export default function Home(props) {
   function transitionHandler(){
-    const tl1 = gsap.timeline();
-    tl1.to('.Home', {duration: 2, scale: 1.2,x: "53rem", y:3,ease: 'power2.in'});
+    let mm1 = gsap.matchMedia(),
+      breakPoint = 950;
+    mm1.add(
+      {
+        isDesktop: `(min-width: ${breakPoint + 1}px)`,
+        isMobile: `(max-width: ${breakPoint}px)`,
+      },
+      (context) => {
+        let {isDesktop, isMobile} = context.conditions;
+        gsap.to('.Home',{
+          duration:2,
+          scale: isDesktop? 1.2: 1,
+          xPercent: isDesktop? 53:100,
+          y: isDesktop? 3:0,
+          opacity: isMobile? 0:1,
+          ease: 'power2.in'
+        })
+      }
+    )
   }
   return (
     <div className='Home'>
@@ -19,8 +36,8 @@ export default function Home(props) {
         <h3>Frontend Developer</h3>
         <h4>Tech Stack : React | SpringBoot </h4>
         <div className='buttons'>
-          <a href='' target='_blank'><button class="button-c" role="button">Contact Me</button></a>
-          <a href='https://github.com/Youuusseff' target='_blank'><button class="button-l" role="button">LinkedIn</button></a>
+          <a href=''><button class="button-c" role="button">Contact Me</button></a>
+          <a href='https://linkedin.com/in/youssef-benomrane-b2a35127a' target='_blank'><button class="button-l" role="button">LinkedIn</button></a>
         </div>
         <div className='transition-description'>
           <button className='transition-button'onClick={()=>transitionHandler()}>Learn more about me</button>

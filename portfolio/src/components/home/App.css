@@ -363,6 +363,8 @@ nav{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   cursor: pointer;
+  -webkit-user-select: none;
+  text-decoration: none;
 }
 .transition-button:hover{
   animation-play-state: paused;
