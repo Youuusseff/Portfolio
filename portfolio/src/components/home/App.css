@@ -178,6 +178,28 @@ nav{
 }
 
 @media screen and (max-width: 950px) {
+  .narrow{
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    left: 1rem;
+    top: 52%;
+    background: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 16px 15px;
+    animation: leftRight 2s infinite;
+  }
+  @keyframes leftRight {
+    0%{
+      left: 1rem;
+    }
+    50%{
+      left: 0.2rem;
+    }
+    100%{
+      left: 1rem;
+    }
+  }
   .navbar{
     position: relative;
     margin-right: 0;

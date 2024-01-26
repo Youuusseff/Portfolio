@@ -1,9 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import pdp from './images/pdp.jpeg'
 import './App.css';
+import { useState } from 'react';
 import gsap from 'gsap';
 
 export default function Home(props) {
+  let transitionButton = null;
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newWidth = window.innerWidth;
+      setWidth(newWidth);
+      console.log("updating width");
+    };
+
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => window.removeEventListener("resize", updateWindowDimensions) 
+
+  }, []);
+  useEffect(()=>{
+    if(width < 800){
+      transitionButton = document.getElementById("transition-button");
+      transitionButton.className = "narrow"
+      transitionButton.textContent = "<";
+    }
+    else{
+      transitionButton = document.getElementById("transition-button");
+      transitionButton.className = "transition-button";
+      transitionButton.textContent = "Learn more about me";
+    }},[width])
   function transitionHandler(){
     let mm1 = gsap.matchMedia(),
       breakPoint = 950;
@@ -14,14 +41,18 @@ export default function Home(props) {
       },
       (context) => {
         let {isDesktop, isMobile} = context.conditions;
+        gsap.to('description',{
+          duration: 2,
+          opacity: 0
+        });
         gsap.to('.Home',{
-          duration:2,
+          duration: 2,
           scale: isDesktop? 1.2: 1,
           xPercent: isDesktop? 53:100,
           y: isDesktop? 3:0,
           opacity: isMobile? 0:1,
           ease: 'power2.in'
-        })
+        });
       }
     )
   }
@@ -40,9 +71,10 @@ export default function Home(props) {
           <a href='https://linkedin.com/in/youssef-benomrane-b2a35127a' target='_blank'><button class="button-l" role="button">LinkedIn</button></a>
         </div>
         <div className='transition-description'>
-          <button className='transition-button'onClick={()=>transitionHandler()}>Learn more about me</button>
+          <button id='transition-button' className='transition-button'onClick={()=>transitionHandler()}>Learn more about me</button>
         </div>
       </div>
+      <script></script>
     </div>
   )
 }
