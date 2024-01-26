@@ -6,7 +6,7 @@ import gsap from 'gsap';
 
 export default function Home(props) {
   let transitionButton = null;
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(window.screen.width);
 
   useEffect(() => {
     const updateWindowDimensions = () => {
@@ -20,17 +20,19 @@ export default function Home(props) {
     return () => window.removeEventListener("resize", updateWindowDimensions) 
 
   }, []);
+
   useEffect(()=>{
-    if(width < 800){
+    if(width < 950){
       transitionButton = document.getElementById("transition-button");
-      transitionButton.className = "narrow"
-      transitionButton.textContent = "<";
+      transitionButton.className = "narrow";
+      transitionButton.innerText = "<";
     }
     else{
       transitionButton = document.getElementById("transition-button");
       transitionButton.className = "transition-button";
-      transitionButton.textContent = "Learn more about me";
-    }},[width])
+      transitionButton.innerText = "Learn more about me";
+    }
+  },[width])
   function transitionHandler(){
     let mm1 = gsap.matchMedia(),
       breakPoint = 950;
@@ -71,7 +73,7 @@ export default function Home(props) {
           <a href='https://linkedin.com/in/youssef-benomrane-b2a35127a' target='_blank'><button class="button-l" role="button">LinkedIn</button></a>
         </div>
         <div className='transition-description'>
-          <button id='transition-button' className='transition-button'onClick={()=>transitionHandler()}>Learn more about me</button>
+          <button id='transition-button' className='transition-button'onClick={()=>transitionHandler()}></button>
         </div>
       </div>
       <script></script>
