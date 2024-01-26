@@ -186,12 +186,12 @@ nav{
     height: 3rem;
     border-radius: 50%;
     left: 1rem;
-    top: 18rem;
+    top: 52%;
     background: none;
     box-shadow: rgba(0, 0, 0, 0.25) 0 16px 15px;
     animation: leftRight 2s infinite;
   }
-  .narrow:active{
+  .narrow:hover{
     animation-play-state: paused;
   }
   @keyframes leftRight {
