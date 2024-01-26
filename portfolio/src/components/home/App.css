@@ -190,9 +190,11 @@ nav{
     background: none;
     box-shadow: rgba(0, 0, 0, 0.25) 0 16px 15px;
     animation: leftRight 2s infinite;
+    vertical-align: top;
   }
   .narrow:hover{
     animation-play-state: paused;
+    top: 48.5%;
   }
   @keyframes leftRight {
     0%{
