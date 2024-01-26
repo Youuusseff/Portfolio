@@ -194,7 +194,7 @@ nav{
   }
   .narrow:hover{
     animation-play-state: paused;
-    animation: disappear 0.5s;
+    animation: disappear 1s;
     opacity: 0;
   }
   @keyframes disappear {
