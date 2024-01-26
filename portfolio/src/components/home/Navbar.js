@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css';
+import gsap from 'gsap';
 
 export default function Navbar() {
   function dropDown() {
@@ -7,8 +8,13 @@ export default function Navbar() {
     console.log(x);
     if (x.className === "right-nav") {
       x.className += " responsive";
+      const tl1 = gsap.timeline();
+      tl1.from("#dropdown",{xPercent: 10});
+      tl1.to("#dropdown",{backgroundColor: "black", color: "white", opacity: 0.9, duration: 1});
     } else {
       x.className = "right-nav";
+      const tl1 = gsap.timeline();
+      tl1.to("#dropdown", {backgroundColor: "white", color: "black", duration: 2, opacity: 1});
     }
   }
   return (
@@ -23,7 +29,7 @@ export default function Navbar() {
               <li className='dropdown-item'>About</li>
               <li className='dropdown-item'>Projects</li>
               <li className='dropdown-item'>Contact</li>
-              <li className="icon" onClick={()=>dropDown()}>
+              <li  id="icon" className="icon" onClick={()=>dropDown()}>
                   <i class="fa fa-bars"></i></li>
             </ul>
           </li>
