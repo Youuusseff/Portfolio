@@ -194,7 +194,7 @@ nav{
   }
   .narrow:hover{
     animation-play-state: paused;
-    top: 48.5%;
+    top: 51%;
   }
   @keyframes leftRight {
     0%{
