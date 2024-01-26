@@ -11,7 +11,6 @@ export default function Navbar() {
       const tl1 = gsap.timeline();
       tl1.from("#dropdown",{xPercent: 10});
       tl1.to("#dropdown",{backgroundColor: "black", color: "white", opacity: 0.8, duration: 1});
-      tl1.to(".dropdown-item",{borderColor:"white", duration: 3});
     } else {
       x.className = "right-nav";
       const tl1 = gsap.timeline();
