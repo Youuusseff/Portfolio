@@ -30,6 +30,7 @@ nav{
 
 .right-nav{
   padding-left: 0.5rem;
+  overflow: hidden !important;
 }
 
 .right-nav > ul{
@@ -232,13 +233,13 @@ nav{
   }
   .right-nav.responsive .dropdown{
     padding-top: 1rem;
-    padding-right: 2rem;
+    padding-right: 17px;
     padding-bottom: 1rem;
     border-radius: 5px;
     overflow: hidden;
   }
   .right-nav.responsive .dropdown-item{
-    padding: 0.5rem;
+    padding: 1rem;
     margin-right: 2rem;
     border-bottom: 1px solid black;
     position: relative;
@@ -342,7 +343,7 @@ nav{
 
 .button-c {
   appearance: none;
-  background-color: #000000;
+  background-color: #2e2c2c;
   border: 2px solid #1A1A1A;
   border-radius: 15px;
   box-sizing: border-box;
