@@ -18,7 +18,7 @@ export default function Navbar() {
     } else {
       x.className = "right-nav";
       const tl1 = gsap.timeline();
-      tl1.to("#dropdown", {backgroundColor: "white", color: "black", duration: 2, opacity: 1});
+      tl1.to("#dropdown", {backgroundColor: "white", color: "black", duration: 0.4, opacity: 1});
     }
   }
   // <-->
