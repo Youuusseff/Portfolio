@@ -1,8 +1,12 @@
 import React from 'react'
 import './App.css';
 import gsap from 'gsap';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+
+  // the dropdown menu on mobile devices with its animation
+
   function dropDown() {
     var x = document.getElementById("my-nav");
     console.log(x);
@@ -17,6 +21,7 @@ export default function Navbar() {
       tl1.to("#dropdown", {backgroundColor: "white", color: "black", duration: 2, opacity: 1});
     }
   }
+  // <-->
   return (
     <>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -25,8 +30,8 @@ export default function Navbar() {
           <li>Youssef Benomrane</li>
           <li className='right-nav' id='my-nav'>
             <ul id='dropdown' className='dropdown'>
-              <li className='dropdown-item'>Home</li>
-              <li className='dropdown-item'>About</li>
+              <li className='dropdown-item'><Link to="home" style={{textDecoration: 'none',color: 'inherit'}}>Home</Link></li>
+              <li className='dropdown-item'><Link to="about" style={{textDecoration: 'none',color: 'inherit'}} >About</Link></li>
               <li className='dropdown-item'>Projects</li>
               <li className='dropdown-item'>Contact</li>
               <li  id="icon" className="icon" onClick={()=>dropDown()}>

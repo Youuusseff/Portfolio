@@ -8,6 +8,20 @@ export default function Home(props) {
   let transitionButton = null;
   const [width, setWidth] = useState(window.screen.width);
 
+  //  the landing animation 
+
+  let location = props.location
+  useEffect(()=>{
+    if (location.pathname === "/home"){
+      gsap.set(".Home", {opacity:0});
+      const tl = gsap.timeline();
+      console.log(location)
+      tl.to(".Home", {duration: 1, opacity: 1, scale: 1.05, ease: 'power1.in'});
+      tl.to(".Home", {duration : 1, scale: 1});}
+  },[location]);
+
+  // it keep track of the width which i need to switch the transition button to a simple narrow to make it better
+  // responsive
   useEffect(() => {
     const updateWindowDimensions = () => {
       const newWidth = window.innerWidth;
@@ -21,6 +35,8 @@ export default function Home(props) {
 
   }, []);
 
+  // js to change the transition button text to a simple narrow when width of screen reaches 950
+
   useEffect(()=>{
     if(width < 950){
       transitionButton = document.getElementById("transition-button");
@@ -33,6 +49,9 @@ export default function Home(props) {
       transitionButton.innerText = "Learn more about me";
     }
   },[width])
+
+  //transition animation in the button  
+
   function transitionHandler(){
     let mm1 = gsap.matchMedia(),
       breakPoint = 950;
@@ -57,6 +76,7 @@ export default function Home(props) {
         });
       }
     )
+    // <--->
   }
   return (
     <div className='Home'>

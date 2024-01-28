@@ -6,7 +6,6 @@ import pdp from './images/pdp.jpeg';
 function About() {
   return (
     <div className='About'>
-        <Navbar/>
         <div className='about-container'>
             <div className='description'>
                 Hi my name is youssef

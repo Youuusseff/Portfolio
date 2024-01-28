@@ -2,10 +2,12 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import './welcome.css'; // Import the CSS file
 import 'particles.js/particles';
+import { useNavigate } from 'react-router-dom';
 const particlesJS = window.particlesJS;
 
 const WelcomeAnimation = (props) => {
   console.log("welcome");
+  const history = useNavigate();
   useEffect(() => {
     // Initialize particles.js
     particlesJS("particle-container", {
@@ -33,7 +35,7 @@ const WelcomeAnimation = (props) => {
     const tl = gsap.timeline();
     tl.to("#text-container", { duration: 2, opacity: 1, scale: 1.5 })
       .to("#particle-container", { duration: 2, opacity: 1, scale: 1.5}, '-=1') // Overlap the particle animation with text animation
-      .to(["#text-container","#particle-container"], { duration : 3, opacity: 0, scale: 0.5,onComplete: ()=>{props.changePage('home')}});
+      .to(["#text-container","#particle-container"], { duration : 3, opacity: 0, scale: 0.5,onComplete: ()=>{history('/home')}});
   }, []); // Empty dependency array to run the effect only once when the component mounts
 
   return (
