@@ -31,6 +31,7 @@ nav{
 .right-nav{
   padding-left: 0.5rem;
   overflow: hidden !important;
+  z-index: 99;
 }
 
 .right-nav > ul{
@@ -77,6 +78,7 @@ nav{
 	animation: morphing 8s infinite;
 	overflow: hidden;
   object-fit: cover;
+  z-index: 0;
 }
 .img-pdp:hover{
 		animation-play-state: paused;
@@ -91,10 +93,12 @@ nav{
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  z-index: -1;
 }
 .pdp-wrapper{
   margin-right: 5rem;
   width: 30%;
+  z-index: -11;
 }
 
 .description{
@@ -213,6 +217,7 @@ nav{
   .navbar{
     position: relative;
     margin-right: 0;
+    z-index: 99;
   }
   .right-nav.responsive {
     position: absolute;
@@ -235,7 +240,7 @@ nav{
   }
   .right-nav.responsive .dropdown{
     padding-top: 1rem;
-    padding-right: 17px;
+    padding-right: 26px;
     padding-bottom: 1rem;
     border-radius: 5px;
     overflow: hidden;
@@ -346,7 +351,7 @@ nav{
 .button-c {
   appearance: none;
   background-color: #2e2c2c;
-  border: 2px solid #1A1A1A;
+  border: 0;
   border-radius: 15px;
   box-sizing: border-box;
   color: #FFFFFF;
@@ -356,7 +361,6 @@ nav{
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
-  margin: 0;
   outline: none;
   text-align: center;
   text-decoration: none;
@@ -366,8 +370,8 @@ nav{
   touch-action: manipulation;
   text-wrap: nowrap;
   will-change: transform;
-  width: 7rem;
-  height: 2.56rem;
+  width: 5rem;
+  height: 2rem!important;
   box-shadow: rgba(0, 0, 0, 0.25) 0 15px 15px;
 }
 .button-l {
