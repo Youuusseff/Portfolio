@@ -27,7 +27,7 @@ export default function Navbar() {
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <nav className='navbar'>
         <ul className='main-nav'>
-          <li className='logo'>Youssef Benomrane</li>
+          <li className='logo'><Link to="home" style={{textDecoration: 'none',color: 'inherit'}}>Youssef Benomrane</Link></li>
           <li className='right-nav' id='my-nav'>
             <ul id='dropdown' className='dropdown'>
               <li className='dropdown-item'><Link to="home" style={{textDecoration: 'none',color: 'inherit'}}>Home</Link></li>
