@@ -44,6 +44,9 @@ nav{
   outline-style: none;
   text-decoration: none;
 }
+.dropdown{
+  padding-right: 16px;
+}
 @media(max-width:950px){
   .dropdown-item{
     display: none;
@@ -318,6 +321,10 @@ nav{
     top: 20px !important;
     width: 100% !important;
   }
+  .dropdown-item:hover{
+    color: white !important;
+    transform: scale(1) !important;
+  }
 }
 @media screen and (min-width:500px) and (max-width:1215px) {
   .main-nav{
@@ -351,7 +358,7 @@ nav{
 .button-c {
   appearance: none;
   background-color: #2e2c2c;
-  border: 0;
+  border: 2px solid;
   border-radius: 15px;
   box-sizing: border-box;
   color: #FFFFFF;
@@ -370,8 +377,8 @@ nav{
   touch-action: manipulation;
   text-wrap: nowrap;
   will-change: transform;
-  width: 5rem;
-  height: 2rem!important;
+  width: 7.5rem;
+  height: 2.7rem!important;
   box-shadow: rgba(0, 0, 0, 0.25) 0 15px 15px;
 }
 .button-l {
@@ -470,4 +477,27 @@ nav{
   100%{
     transform: scale(1);
   }
+}
+.dropdown-item:hover{
+  cursor: pointer;
+  animation: navHover 1s;
+  transform: scale(1.1);
+  color: rgb(14, 13, 13);
+}
+.logo:hover{
+  cursor: pointer;
+  animation: navHover 1s;
+  transform: scale(1.1);
+  color: rgb(14, 13, 13);
+}
+@keyframes navHover {
+  0%{
+    color: inherit;
+    transform: scale(1);
+  }
+  100%{
+    color: rgb(14, 13, 13);
+    transform: scale(1.1);
+  }
+
 }
