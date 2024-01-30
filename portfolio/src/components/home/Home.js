@@ -90,7 +90,7 @@ export default function Home(props) {
         <p>Hello, I'm</p>
         <h1>Youssef Benomrane</h1>
         <h3>Frontend Developer</h3>
-        <h4>Tech Stack : React <FaReact style={{color:"blue"}}/> | SpringBoot <SiSpring style={{color:"green"}}/></h4>
+        <h4>Tech Stack : React <FaReact style={{color:"blue", paddingRight:"5px", paddingLeft:"5px"}}/> | SpringBoot <SiSpring style={{color:"green" ,paddingRight:'5px', paddingLeft:"5px"}}/></h4>
         <div className='buttons'>
           <a href=''><button class="button-c" role="button">Contact Me <SiMinutemailer/></button></a>
           <a href='https://linkedin.com/in/youssef-benomrane-b2a35127a' target='_blank'><button class="button-l" role="button">LinkedIn</button></a>
