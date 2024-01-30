@@ -31,7 +31,7 @@ export default function Navbar() {
           <li className='right-nav' id='my-nav'>
             <ul id='dropdown' className='dropdown'>
               <li className='dropdown-item'><Link to="home" style={{textDecoration: 'none',color: 'inherit'}}>Home</Link></li>
-              <li className='dropdown-item'><Link to="about" style={{textDecoration: 'none',color: 'inherit'}} >About</Link></li>
+              <li className='dropdown-item'><Link to="about" style={{textDecoration: 'none',color: 'inherit', animation:"rotate 2s infinite"}} >About</Link></li>
               <li className='dropdown-item'>Projects</li>
               <li className='dropdown-item'>Contact</li>
               <li  id="icon" className="icon" onClick={()=>dropDown()}>
