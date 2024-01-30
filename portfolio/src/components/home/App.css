@@ -270,6 +270,7 @@ nav{
   }
   .button-c{
     text-align: center;
+    border: 1px solid black !important;
     width: 9rem !important;
     margin: 0.5rem !important;
     text-wrap: nowrap !important;
