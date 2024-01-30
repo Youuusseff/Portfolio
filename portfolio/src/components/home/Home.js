@@ -3,6 +3,9 @@ import pdp from './images/pdp.jpeg'
 import './App.css';
 import { useState } from 'react';
 import gsap from 'gsap';
+import { FaReact } from "react-icons/fa";
+import { SiSpring } from "react-icons/si";
+import { SiMinutemailer } from "react-icons/si";
 
 export default function Home(props) {
   let transitionButton = null;
@@ -87,9 +90,9 @@ export default function Home(props) {
         <p>Hello, I'm</p>
         <h1>Youssef Benomrane</h1>
         <h3>Frontend Developer</h3>
-        <h4>Tech Stack : React | SpringBoot </h4>
+        <h4>Tech Stack : React <FaReact style={{color:"blue"}}/> | SpringBoot <SiSpring style={{color:"green"}}/></h4>
         <div className='buttons'>
-          <a href=''><button class="button-c" role="button">Contact Me</button></a>
+          <a href=''><button class="button-c" role="button">Contact Me <SiMinutemailer/></button></a>
           <a href='https://linkedin.com/in/youssef-benomrane-b2a35127a' target='_blank'><button class="button-l" role="button">LinkedIn</button></a>
         </div>
         <div className='transition-description'>
