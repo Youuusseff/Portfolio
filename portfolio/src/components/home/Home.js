@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { UilReact } from '@iconscout/react-unicons'
 import {ReactComponent as SpringBoot} from './images/spring.svg'
 import {ReactComponent as ReactLogo} from './images/react.svg'
+import Navbar from './Navbar';
 
 export default function Home(props) {
   let transitionButton = null;
@@ -84,6 +85,8 @@ export default function Home(props) {
     // <--->
   }
   return (
+    <>
+    <Navbar/>
     <div className='Home'>
       <div className='pdp-wrapper'>
         <img className='img-pdp' src={pdp} alt='pdp'></img>
@@ -101,7 +104,7 @@ export default function Home(props) {
           <button id='transition-button' className='transition-button'onClick={()=>transitionHandler()}></button>
         </div>
       </div>
-      <script></script>
     </div>
+    </>
   )
 }

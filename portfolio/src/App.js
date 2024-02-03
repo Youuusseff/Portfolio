@@ -18,7 +18,6 @@ function App() {
   }, []);
   return (
     <div className='.App'>
-      <Navbar/>
       <Routes>
         <Route path='/' element={<WelcomeAnimation/>}/>
         <Route path='/home' element={<Home location={location}/>} />
