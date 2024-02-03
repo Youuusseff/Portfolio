@@ -3,9 +3,9 @@ import pdp from './images/pdp.jpeg'
 import './App.css';
 import { useState } from 'react';
 import gsap from 'gsap';
-import { FaReact } from "react-icons/fa";
-import { SiSpring } from "react-icons/si";
-import { SiMinutemailer } from "react-icons/si";
+import { UilReact } from '@iconscout/react-unicons'
+import {ReactComponent as SpringBoot} from './images/spring.svg'
+import {ReactComponent as ReactLogo} from './images/react.svg'
 
 export default function Home(props) {
   let transitionButton = null;
@@ -92,7 +92,7 @@ export default function Home(props) {
         <p>Hello, I'm</p>
         <h1>Youssef Benomrane</h1>
         <h3>Frontend Developer</h3>
-        <h4>Tech Stack : React | SpringBoot</h4>
+        <h4>Tech Stack : React <ReactLogo style={{marginRight:"5px", marginLeft:"5px"}}/>| SpringBoot <SpringBoot style={{marginRight:"5px", marginLeft:"5px"}}/></h4>
         <div className='buttons'>
           <a href=''><button class="button-c" role="button">Contact Me</button></a>
           <a href='https://linkedin.com/in/youssef-benomrane-b2a35127a' target='_blank'><button class="button-l" role="button">LinkedIn</button></a>
