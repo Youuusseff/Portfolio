@@ -13,8 +13,8 @@ export default function Navbar() {
     if (x.className === "right-nav") {
       x.className += " responsive";
       const tl1 = gsap.timeline();
-      tl1.from("#dropdown",{xPercent: 10});
-      tl1.to("#dropdown",{backgroundColor: "black", color: "white", opacity: 0.8, duration: 1});
+      tl1.from("#dropdown",{xPercent: 10, duration: 0.25});
+      tl1.to("#dropdown",{backgroundColor: "black", color: "white", opacity: 0.8, duration: 0.5});
     } else {
       x.className = "right-nav";
       const tl1 = gsap.timeline();
