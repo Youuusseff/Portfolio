@@ -14,6 +14,7 @@ function App() {
   useEffect(() => {
     navigate("/"); 
   }, []);
+  
   return (
     <div className='.App'>
       <Routes>

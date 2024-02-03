@@ -3,7 +3,6 @@ import pdp from './images/pdp.jpeg'
 import './App.css';
 import { useState } from 'react';
 import gsap from 'gsap';
-import { UilReact } from '@iconscout/react-unicons'
 import {ReactComponent as SpringBoot} from './images/spring.svg'
 import {ReactComponent as ReactLogo} from './images/react.svg'
 import Navbar from './Navbar';
