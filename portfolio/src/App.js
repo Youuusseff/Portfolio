@@ -8,13 +8,11 @@ import { Route, Routes, useLocation, useNavigate} from 'react-router-dom';
 
 function App() {
   const location = useLocation();
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   // Redirect to the welcome animation if the user reloads on the home or about route
   useEffect(() => {
-    if (['/home', '/about'].includes(location.pathname)) {
-      history('/');
-    }
+    navigate("/"); 
   }, []);
   return (
     <div className='.App'>
