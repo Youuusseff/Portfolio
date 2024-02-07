@@ -6,8 +6,10 @@ import gsap from 'gsap';
 import {ReactComponent as SpringBoot} from './images/spring.svg'
 import {ReactComponent as ReactLogo} from './images/react.svg'
 import Navbar from './Navbar';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home(props) {
+  const history = useNavigate();
   let transitionButton = null;
   const [width, setWidth] = useState(window.screen.width);
 
@@ -69,7 +71,8 @@ export default function Home(props) {
         let {isDesktop, isMobile} = context.conditions;
         gsap.to('description',{
           duration: 2,
-          opacity: 0
+          opacity: 0,
+          backgroundColor : 'black'
         });
         gsap.to('.Home',{
           duration: 2,
@@ -77,7 +80,8 @@ export default function Home(props) {
           xPercent: isDesktop? 53:100,
           y: isDesktop? 3:0,
           opacity: isMobile? 0:1,
-          ease: 'power2.in'
+          ease: 'power2.in',
+          onComplete: ()=>{history('/about')}
         });
       }
     )
