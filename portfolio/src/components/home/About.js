@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import './App.css';
-import pdp from './images/pdp.jpeg';
+import './About.css';
 import Starfield from 'react-starfield';
 import gsap from 'gsap';
+
+
 function About() {
-  var body = document.body;
-  var tl1 = gsap.timeline();
-  
   return (
     <div className='About'>
       <Starfield className='starfield'
@@ -16,7 +15,13 @@ function About() {
         speedFactor={0.05}
         backgroundColor="black"
       />
-      <Navbar/>  
+      <Navbar/>
+      <div className='about-wrapper'>
+        <div className='details'>
+          <h1 class="line-1 anim-typewriter">Learn more about me!</h1>
+          <p>Scroll to continue</p>
+        </div>
+      </div>  
     </div>
   )
 }

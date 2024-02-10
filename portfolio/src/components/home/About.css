@@ -1,0 +1,67 @@
+.about-wrapper{
+    margin-top: 15rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+.line-1{
+    letter-spacing: 10px;
+    color: rgb(171, 168, 168);
+    width: 20.18em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.anim-typewriter{
+    width:0;
+    animation: typewriter 5s steps(35) 1s 1 normal both,
+    blinkTextCursor 500ms steps(35) infinite normal;
+}
+p{
+    margin-top: 3rem;
+    letter-spacing: 3px;
+    color: rgb(171, 168, 168);
+    animation: displayBlock 7s ease-in;
+}
+@keyframes displayBlock {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes typewriter{
+    from{
+        width: 0;
+    }
+    to{
+        width: 31rem;
+    }
+}
+@keyframes blinkTextCursor{
+    from{
+        border-right-color: rgba(255,255,255,.75);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+@media (max-width: 800px) {
+    .line-1{
+        font-size: 1.15rem;
+        letter-spacing: 5px;
+    }
+    @keyframes typewriter{
+        from{
+            width: 0;
+        }
+        to{
+            width: 19rem;
+        }
+    }
+}        
