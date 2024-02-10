@@ -21,7 +21,8 @@
     animation: typewriter 5s steps(35) 1s 1 normal both,
     blinkTextCursor 500ms steps(35) infinite normal;
 }
-p{
+
+.scroll{
     margin-top: 3rem;
     letter-spacing: 3px;
     color: rgb(171, 168, 168);

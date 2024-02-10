@@ -6,7 +6,9 @@ import Starfield from 'react-starfield';
 import gsap from 'gsap';
 
 
+
 function About() {
+  
   return (
     <div className='About'>
       <Starfield className='starfield'
@@ -19,7 +21,7 @@ function About() {
       <div className='about-wrapper'>
         <div className='details'>
           <h1 class="line-1 anim-typewriter">Learn more about me!</h1>
-          <p>Scroll to continue</p>
+          <p className='scroll'>Scroll to continue</p>
         </div>
       </div>  
     </div>

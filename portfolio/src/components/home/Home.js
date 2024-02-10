@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import pdp from './images/pdp.jpeg'
+import pdp from './assets/pdp.jpeg'
 import './App.css';
 import { useState } from 'react';
 import gsap from 'gsap';
-import {ReactComponent as SpringBoot} from './images/spring.svg'
-import {ReactComponent as ReactLogo} from './images/react.svg'
+import {ReactComponent as SpringBoot} from './assets/spring.svg'
+import {ReactComponent as ReactLogo} from './assets/react.svg'
 import Navbar from './Navbar';
 import { useNavigate } from 'react-router-dom';
 
