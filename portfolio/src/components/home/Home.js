@@ -76,10 +76,8 @@ export default function Home(props) {
         });
         gsap.to('.Home',{
           duration: 2,
-          scale: isDesktop? 1.2: 1,
-          xPercent: isDesktop? 53:100,
-          y: isDesktop? 3:0,
-          opacity: isMobile? 0:1,
+          xPercent: 100,
+          opacity: 0,
           ease: 'power2.in',
           onComplete: ()=>{history('/about')}
         });
