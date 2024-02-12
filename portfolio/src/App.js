@@ -4,7 +4,6 @@ import Home from './components/home/Home';
 import WelcomeAnimation from './components/home/welcome';
 import About from './components/home/About';
 import { Route, Routes, useLocation, useNavigate} from 'react-router-dom';
-import gsap from 'gsap';
 
 function App() {
   const location = useLocation();
