@@ -5,6 +5,10 @@
     align-content: center;
     text-align: center;
 }
+.details-part{
+    height: 100%;
+    margin-bottom: 0rem;
+}
 .line-1{
     letter-spacing: 10px;
     color: rgb(171, 168, 168);
@@ -12,9 +16,16 @@
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
     font-size: 180%;
-    text-align: center;
     white-space: nowrap;
     overflow: hidden;
+}
+.line-2{
+    letter-spacing: 5px;
+    color: rgb(171, 168, 168);
+    width: 80%;
+    margin: 0 auto;
+    font-size: 180%;
+    text-align: center;
 }
 .anim-typewriter{
     width:0;
@@ -65,4 +76,4 @@
             width: 19rem;
         }
     }
-}        
+}

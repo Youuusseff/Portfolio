@@ -7,8 +7,8 @@ import gsap from 'gsap';
 
 
 
-function About() {
-  
+
+function About() { 
   return (
     <div className='About'>
       <Starfield className='starfield'
@@ -20,8 +20,10 @@ function About() {
       <Navbar/>
       <div className='about-wrapper'>
         <div className='details'>
-          <h1 class="line-1 anim-typewriter">Learn more about me!</h1>
-          <p className='scroll'>Scroll to continue</p>
+          <div className='details-part'>
+            <h1 class="line-1 anim-typewriter">Learn more about me!</h1>
+            <p className='scroll'>Scroll to continue</p>
+          </div>
         </div>
       </div>  
     </div>
