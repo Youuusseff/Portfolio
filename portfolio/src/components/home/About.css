@@ -1,14 +1,25 @@
-.about-wrapper{
-    margin-top: 15rem;
+
+.full-screen {
+    width: 100%;
+    height: 80vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
-    text-align: center;
+    align-items: center;
 }
-.details-part{
-    height: 100%;
-    margin-bottom: 0rem;
+.details-part2{
+    margin-bottom: 0;
+    height: 8vh !important;
 }
+.hello{
+    opacity: 0;
+}
+nav {
+    position: -webkit-sticky;
+    position: sticky !important;
+    top: 20px !important;
+    width: 100% !important;
+  }
 .line-1{
     letter-spacing: 10px;
     color: rgb(171, 168, 168);
@@ -34,10 +45,11 @@
 }
 
 .scroll{
-    margin-top: 3rem;
+    margin-top: 2rem;
     letter-spacing: 3px;
     color: rgb(171, 168, 168);
     animation: displayBlock 7s ease-in;
+    margin-bottom: 20%;
 }
 @keyframes displayBlock {
     from{
