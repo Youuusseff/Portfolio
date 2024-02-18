@@ -14,7 +14,7 @@ function About() {
     let ctx = gsap.context(()=>{
       let tl = gsap.timeline({
         defaults: {
-          duration: 60000
+          duration: 600000
         },
         scrollTrigger: {
           trigger: ".line-1",
@@ -26,7 +26,7 @@ function About() {
         }
       });
       tl.to('.line-1', {
-        y: -50,
+        y: -100,
         opacity: 0,
       })
       tl.to(".hello", {
@@ -34,9 +34,11 @@ function About() {
         y: -450,
         delay: -600
       })
-      tl.from('.scroll',{
-        opacity:0.3,
-      }, '-=1')
+      tl.to('.scroll',{
+        opacity:0.2,
+        delay: 500,
+        y: 10
+      }, "-=1")
     })
     return () => ctx.revert(); // <-- cleanup!
   },[])
