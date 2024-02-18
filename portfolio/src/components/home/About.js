@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function About() { 
+  //Scroll trigger animation 
   useLayoutEffect(()=>{
     let ctx = gsap.context(()=>{
       let tl = gsap.timeline({
