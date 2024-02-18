@@ -12,6 +12,7 @@
 }
 .About{
     max-height: 180vh !important;
+    background-color: black !important;
     overflow: hidden;
 }
 .card{
