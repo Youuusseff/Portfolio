@@ -5,6 +5,10 @@ import './About.css';
 import Starfield from 'react-starfield';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {ReactComponent as CampingTent} from './assets/camping.svg';
+import {ReactComponent as Tunisia} from './assets/tunisia.svg';
+import {ReactComponent as Computer} from './assets/computer.svg';
+import {ReactComponent as Travel} from './assets/travel.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,11 +38,6 @@ function About() {
         y: -100,
         opacity: 0,
       })
-      tl.to('.scroll',{
-        opacity:0.2,
-        delay: 500,
-        y: 10
-      }, "-=1")
     })
     return () => ctx.revert(); // <-- cleanup!
   },[])
@@ -60,15 +59,10 @@ function About() {
           </div>
           <div className='details-part2 full-screen'>
             <div className='card'>
-              <h1 className='hello' style={{color:'white !important'}}>Welcome to my web portfolio!</h1>
+              <h1 className='hello'>Welcome to my Portfolio!</h1>
 
-<p className='description-about'>I am a passionate college student based in Tunisia, currently pursuing a degree in Computer Science. Beyond my academic pursuits, I lead a dynamic lifestyle filled with diverse interests and experiences.
-
-When I'm not immersed in coding or studying algorithms, you'll often find me indulging in my love for football. Whether it's cheering for my favorite team or engaging in friendly debates about the latest matches, football is a significant part of my life. Additionally, I enjoy the simple pleasures of life, such as meeting friends over coffee to engage in stimulating conversations and share laughter.
-
-Exploring the great outdoors is another cherished aspect of my life. I have a profound affection for camping and traveling, as they offer me the opportunity to connect with nature, explore new cultures, and create lasting memories. From pitching tents under starlit skies to embarking on spontaneous road trips, I thrive on the adventure and spontaneity that travel brings.
-
-Through my portfolio, I aim to showcase not only my technical skills but also my vibrant personality and diverse interests. Join me on this journey as I continue to explore the world of technology while embracing the richness of life's experiences.</p>
+<p className='description-about'>I am a passionate college student based in <b style={{color:"rgb(78, 133, 222)", letterSpacing:"4px"}}>Tunisia</b><Tunisia/>, currently pursuing a degree in <b style={{color:"rgb(87, 245, 247)",paddingRight:"5px"}}>Computer Science</b><Computer/>. Beyond my academic pursuits, I lead a dynamic lifestyle filled with diverse interests and experiences.
+Exploring the great outdoors is another cherished aspect of my life as I have a profound affection for <b style={{color:"rgb(83, 125, 75)"}}>Camping</b> <CampingTent/> and <b style={{color:"rgb(81, 109, 252)"}}>Traveling</b> <Travel/>.</p>
             </div>
           </div>
         </div>
