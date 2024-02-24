@@ -1,9 +1,10 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import Navbar from './Navbar';
 import './App.css';
 import './About.css';
 import Starfield from 'react-starfield';
 import gsap from 'gsap';
+import { useNavigate } from 'react-router-dom';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {ReactComponent as CampingTent} from './assets/camping.svg';
 import {ReactComponent as Tunisia} from './assets/tunisia.svg';
@@ -13,7 +14,10 @@ import {ReactComponent as Travel} from './assets/travel.svg';
 gsap.registerPlugin(ScrollTrigger);
 
 function About() { 
-  const width = window.innerWidth
+  const history = useNavigate();
+  let transitionButton = null;
+  const [width, setWidth] = useState(window.screen.width);
+  const width1 = window.innerWidth
   //Scroll trigger animation 
   useLayoutEffect(()=>{
     let ctx = gsap.context(()=>{
@@ -23,24 +27,54 @@ function About() {
         },
         scrollTrigger: {
           trigger: ".line-1",
-          start: width>850? "-700%": "-1099%",
+          start: width1>850? "-700%": "-1099%",
           end: "+=100%",
           pin: ".details",
           scrub: true
         }
       });
+      tl.to('.line-1', {
+        y: -100,
+        opacity: 0,
+      })
       tl.to(".card", {
         opacity: 1,
         y: -550,
         delay: -600
       })
-      tl.to('.line-1', {
-        y: -100,
-        opacity: 0,
-      })
+      tl.from('.transition-button', {opacity: 0, onComplete: () =>{console.log("complete");}})
     })
     return () => ctx.revert(); // <-- cleanup!
   },[])
+  // it keep track of the width which i need to switch the transition button to a simple narrow to make it better
+  // responsive
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newWidth = window.innerWidth;
+      setWidth(newWidth);
+      console.log("updating width");
+    };
+
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => window.removeEventListener("resize", updateWindowDimensions) 
+
+  }, []);
+
+  // js to change the transition button text to a simple narrow when width of screen reaches 950
+
+  useEffect(()=>{
+    if(width < 950){
+      transitionButton = document.getElementById("transition-button");
+      transitionButton.className = "narrow";
+      transitionButton.innerText = "<";
+    }
+    else{
+      transitionButton = document.getElementById("transition-button");
+      transitionButton.className = "transition-button";
+      transitionButton.innerText = "Projects";
+    }
+  },[width])
   return (
     <div className='About'>
       <Starfield
@@ -62,7 +96,8 @@ function About() {
               <h1 className='hello'>Welcome to my Portfolio!</h1>
 
 <p className='description-about'>I am a passionate college student based in <b style={{color:"rgb(78, 133, 222)", letterSpacing:"4px"}}>Tunisia</b><Tunisia/>, currently pursuing a degree in <b style={{color:"rgb(87, 245, 247)",paddingRight:"5px"}}>Computer Science</b><Computer/>. Beyond my academic pursuits, I lead a dynamic lifestyle filled with diverse interests and experiences.
-Exploring the great outdoors is another cherished aspect of my life as I have a profound affection for <b style={{color:"rgb(83, 125, 75)"}}>Camping</b> <CampingTent/> and <b style={{color:"rgb(81, 109, 252)"}}>Traveling</b> <Travel/>.</p>
+Exploring the great outdoors is another cherished aspect of my life as I have a profound affection for <b style={{color:"rgb(83, 125, 75)"}}>Camping</b> <CampingTent/> and <b style={{color:"rgb(81, 109, 252)"}}>Traveling</b> <Travel/>.</p>4
+            <button className='transition-button' id='transition-button'>Projects</button>
             </div>
           </div>
         </div>

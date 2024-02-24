@@ -34,6 +34,8 @@
     -webkit-box-shadow: 0px 0px 208px 0px rgba(255,255,255,0.8);
 -moz-box-shadow: 0px 0px 208px 0px rgba(255,255,255,0.8);
 box-shadow: 0px 0px 208px 0px rgba(255,255,255,0.8);
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 .details-part2{
     margin-bottom: 0;

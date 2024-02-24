@@ -15,7 +15,6 @@ export default function Home(props) {
 
   //  the landing animation 
 
-  // removed the icons needs changing
 
   let location = props.location
   useEffect(()=>{
