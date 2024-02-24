@@ -16,6 +16,7 @@
     letter-spacing: 3px;
     padding: 2rem 7%;
     margin-top: 1rem;
+    padding-bottom: 0;
 }
 .About{
     max-height: 180vh !important;
@@ -33,7 +34,7 @@
     background-color: rgb(11, 11, 11);
     -webkit-box-shadow: 0px 0px 208px 0px rgba(255,255,255,0.8);
 -moz-box-shadow: 0px 0px 208px 0px rgba(255,255,255,0.8);
-box-shadow: 0px 0px 208px 0px rgba(255,255,255,0.8);
+box-shadow: 0px 0px 1208px 0px rgba(255,255,255,0.8);
     margin-bottom: 0;
     padding-bottom: 0;
 }
@@ -83,6 +84,20 @@ nav {
     color: rgb(171, 168, 168);
     animation: displayBlock 7s ease-in;
     margin-bottom: 20%;
+}
+.card .transition-button{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: white;
+    height: 3rem;
+    text-align: center;
+    line-height: 0;
+    color: rgb(46, 45, 45);
+    position: relative;
+    top: -10%;
+    letter-spacing: 2px;
+}
+.card .transition-button:hover{
+    animation: none !important;;
 }
 @keyframes displayBlock {
     from{
