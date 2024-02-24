@@ -74,6 +74,30 @@ function About() {
       transitionButton.innerText = "Projects";
     }
   },[width])
+  function transitionHandler(){
+    let mm1 = gsap.matchMedia(),
+      breakPoint = 950;
+    mm1.add(
+      {
+        isDesktop: `(min-width: ${breakPoint + 1}px)`,
+        isMobile: `(max-width: ${breakPoint}px)`,
+      },
+      (context) => {
+        let {isDesktop, isMobile} = context.conditions;
+        const tl = gsap.timeline();
+        tl.to(".scroll", {opacity: 0, duration:0})
+        tl.to('.card',{ yPercent: 10,opacity: 0.4, duration: 1})
+        tl.to('.card',{
+          duration: 2,
+          yPercent: -100,
+          opacity: 0,
+          ease: 'power2.in',
+          onComplete: ()=>{history("/home")}
+        });
+      }
+    )
+    // <--->
+  }
   return (
     <div className='About'>
       <Starfield
@@ -96,7 +120,7 @@ function About() {
 
 <p className='description-about'>I am a passionate college student based in <b style={{color:"rgb(78, 133, 222)", letterSpacing:"4px"}}>Tunisia</b><Tunisia/>, currently pursuing a degree in <b style={{color:"rgb(87, 245, 247)",paddingRight:"5px"}}>Computer Science</b><Computer/>. Beyond my academic pursuits, I lead a dynamic lifestyle filled with diverse interests and experiences.
 Exploring the great outdoors is another cherished aspect of my life as I have a profound affection for <b style={{color:"rgb(83, 125, 75)"}}>Camping</b> <CampingTent/> and <b style={{color:"rgb(81, 109, 252)"}}>Traveling</b> <Travel/>.</p>
-            <button className='transition-button' id='transition-button'>Projects</button>
+            <button className='transition-button' id='transition-button' onClick={transitionHandler}>Projects</button>
             </div>
           </div>
         </div>
