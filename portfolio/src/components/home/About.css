@@ -128,6 +128,14 @@ nav {
         max-height: 200vh !important;
         overflow: hidden;
     }
+    .card .narrow{
+        background-color: white;
+        border-color: rgb(255, 255, 255);
+        position: fixed;
+        top: 83%;
+        left: 40% !important;
+        animation: scale 1s  infinite;
+    }
     .card{
         width: 94%;
     }

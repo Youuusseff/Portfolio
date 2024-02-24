@@ -41,7 +41,7 @@ function About() {
         y: -550,
         delay: -600
       })
-      tl.from('.transition-button', {opacity: 0, onComplete: () =>{console.log("complete");}})
+      tl.from('#transition-button', {opacity: 0})
     })
     return () => ctx.revert(); // <-- cleanup!
   },[])
@@ -66,7 +66,7 @@ function About() {
     if(width < 950){
       transitionButton = document.getElementById("transition-button");
       transitionButton.className = "narrow";
-      transitionButton.innerText = "<";
+      transitionButton.innerText = "↓";
     }
     else{
       transitionButton = document.getElementById("transition-button");
