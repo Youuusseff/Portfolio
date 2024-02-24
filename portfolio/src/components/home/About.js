@@ -83,7 +83,6 @@ function About() {
         isMobile: `(max-width: ${breakPoint}px)`,
       },
       (context) => {
-        let {isDesktop, isMobile} = context.conditions;
         const tl = gsap.timeline();
         tl.to(".scroll", {opacity: 0, duration:0})
         tl.to('.card',{ yPercent: 10,opacity: 0.4, duration: 1})
