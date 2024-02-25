@@ -395,7 +395,7 @@ nav{
   .right-nav.responsive .dropdown-item{
     padding: 1rem;
     margin-right: 2rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid;
     position: relative;
     bottom: 20%;
     overflow: hidden;
