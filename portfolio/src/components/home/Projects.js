@@ -28,7 +28,7 @@ function Projects() {
                     </div>
                     <div className='project-card-details'>
                         <h3 className='project-card-title'>JWT auth TodoApp</h3>
-                        <p className='project-card-description'>A full stack todoApp using jwt token as authentication,</p>
+                        <p className='project-card-description'>A full stack todoApp using jwt token as authentication,I havent deployed the app yet but here is the github</p>
                         <div className='tools'>
                             <div className='tool'>React</div>
                             <div className='tool'>SpringBoot</div>
