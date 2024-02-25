@@ -15,12 +15,12 @@ export default function Navbar() {
   useEffect(() => {
     // Check if the pathname of the location is '/'
     // You can replace this condition with your specific route conditions
-    if (pathname === '/home') {
-      setBackgroundColor('black');
-      setOppositeColor('white');
-    } else {
+    if (pathname === '/about') {
       setBackgroundColor('white');
       setOppositeColor('black');
+    } else {
+      setBackgroundColor('black');
+      setOppositeColor('white');
     }
   }, [pathname]);
 

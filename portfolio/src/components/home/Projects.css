@@ -2,10 +2,6 @@
     margin: 0;
     width: 100%;
 }
-.Projects nav{
-    color: black !important;
-    width: 100%;
-}
 .project{
     margin-top: 0;
     margin-bottom: 2rem;
@@ -37,6 +33,11 @@
 .projects-wrapper img{
     width: 7rem;
     height: 7rem;
+}
+
+#spotify img{
+    width: 13rem;
+    height: 5rem;
 }
 .project-card-title{
     font-weight: 700;
@@ -79,6 +80,25 @@
     width: 8rem;
     height: 2rem;
 }
+
+#spotify-card{
+    opacity: 0.3;
+    position: relative;
+    cursor: not-allowed;
+}
+
+.construction{
+    z-index: 99;
+    position: absolute;
+    width: 12rem !important;
+    height: 10rem!important;
+    opacity: 0.8;
+    cursor: not-allowed;
+    top: 1;
+    right: 1;
+    background-image: transparent !important;
+}
+
 @media (min-width:1080px) and (max-width: 1320px) {
     .project-card{
         width: 30%;
