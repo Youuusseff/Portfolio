@@ -52,7 +52,7 @@ export default function Navbar() {
               <li className='dropdown-item'><Link to="/home" style={{textDecoration: 'none',color: 'inherit'}}>Home</Link></li>
               <li className='dropdown-item'><Link to="/about" style={{textDecoration: 'none',color: 'inherit', animation:"rotate 2s infinite"}} >About</Link></li>
               <li className='dropdown-item'><Link to="/projects" style={{textDecoration: 'none',color: 'inherit'}}>Projects</Link></li>
-              <li className='dropdown-item'>Contact</li>
+              <li className='dropdown-item'><a href="mailto:youssefbenomrane45@gmail.com?Subject=dev" style={{textDecoration: 'none',color: 'inherit'}}>Contact</a></li>
               <li  id="icon" className="icon" onClick={()=>dropDown()}>
                   <i class="fa fa-bars"></i></li>
             </ul>

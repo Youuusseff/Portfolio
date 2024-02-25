@@ -91,7 +91,7 @@ function About() {
           yPercent: -100,
           opacity: 0,
           ease: 'power2.in',
-          onComplete: ()=>{history("/home")}
+          onComplete: ()=>{history("/projects")}
         });
       }
     )

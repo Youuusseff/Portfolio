@@ -6,7 +6,16 @@ import spotify from'./assets/spotify.jpg'
 import portfolio from './assets/hayaa.png'
 import { Link } from 'react-router-dom'
 import construction from './assets/construction.jpg'
+import gsap from 'gsap'
+import { useEffect } from 'react'
 function Projects() {
+    useEffect(()=>{
+        document.documentElement.scrollTop = 0;
+        gsap.set(".Projects", {opacity:0});
+        const tl = gsap.timeline();
+        tl.to(".Projects", {duration: 1, opacity: 1, scale: 1.05, ease: 'power1.in'});
+        tl.to(".Projects", {duration : 1, scale: 1, y: 10});}
+      ,[]);
   return (
     <div className='Projects'>
         <Navbar/>
@@ -26,8 +35,8 @@ function Projects() {
                             <div className='tool'>JWT</div>
                         </div>
                         <div className='card-buttons'>
-                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button button-c" role="button">Github</button></a>
-                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button button-l" role="button">Live Demo</button></a>
+                            <a href='https://github.com/Youuusseff/Todoapp' target='_blank' rel='noopener noreferrer'><button className="card-button button-c" role="button">Github</button></a>
+                            <a href='#/projects' rel='noopener noreferrer'><button className="card-button button-l" role="button">Live Demo</button></a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +52,7 @@ function Projects() {
                             <div className='tool'>React Router</div>
                         </div>
                         <div className='card-buttons'>
-                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button button-c" role="button">Github</button></a>
+                            <a href='https://github.com/Youuusseff/Portfolio' target='_blank' rel='noopener noreferrer'><button className="card-button button-c" role="button">Github</button></a>
                             <Link to="/home" style={{textDecoration: 'none',color: 'inherit'}}><button className="card-button button-l" role="button">Live Demo</button></Link>
                         </div>
                     </div>
