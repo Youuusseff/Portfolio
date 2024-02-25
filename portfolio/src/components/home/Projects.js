@@ -1,11 +1,11 @@
 import React from 'react'
 import todoApp from './assets/todo.png'
 import Navbar from './Navbar'
-
+import './Projects.css'
 function Projects() {
   return (
     <div className='Projects'>
-        <Navbar style={{}}/>
+        <Navbar/>
         <div className='projects-wrapper'>
             <h1 className="project">Projects</h1>
             <div className='projects-container'>
