@@ -97,7 +97,7 @@ export default function Home(props) {
         <h3>Frontend Developer</h3>
         <h4>Tech Stack : React <ReactLogo style={{marginRight:"5px", marginLeft:"5px"}}/>| SpringBoot <SpringBoot style={{marginRight:"5px", marginLeft:"5px"}}/></h4>
         <div className='buttons'>
-          <a href=''><button class="button-c" role="button">Contact Me</button></a>
+          <a href="mailto:youssefbenomrane45@gmail.com?Subject=dev" style={{textDecoration: 'none',color: 'inherit'}}><button class="button-c" role="button">Contact Me</button></a>
           <a href='https://linkedin.com/in/youssef-benomrane-b2a35127a' target='_blank'><button class="button-l" role="button">LinkedIn</button></a>
         </div>
         <div className='transition-description'>
