@@ -22,8 +22,8 @@ function Projects() {
                             <div className='tool'>JWT</div>
                         </div>
                         <div className='card-buttons'>
-                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button" role="button">Github</button></a>
-                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button" role="button">Live Demo</button></a>
+                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button button-c" role="button">Github</button></a>
+                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button button-l" role="button">Live Demo</button></a>
                         </div>
                     </div>
                 </div>
@@ -40,8 +40,8 @@ function Projects() {
                             <div className='tool'>JWT</div>
                         </div>
                         <div className='card-buttons'>
-                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button" role="button">Github</button></a>
-                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button" role="button">Live Demo</button></a>
+                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button button-c" role="button">Github</button></a>
+                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button button-l" role="button">Live Demo</button></a>
                         </div>
                     </div>
                 </div>
@@ -58,8 +58,8 @@ function Projects() {
                             <div className='tool'>JWT</div>
                         </div>
                         <div className='card-buttons'>
-                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button" role="button">Github</button></a>
-                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button" role="button">Live Demo</button></a>
+                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button button-c" role="button">Github</button></a>
+                            <a href='#' target='_blank' rel='noopener noreferrer'><button className="card-button button-l" role="button">Live Demo</button></a>
                         </div>
                     </div>
                 </div>
