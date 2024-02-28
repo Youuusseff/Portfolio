@@ -17,6 +17,9 @@ function About() {
   let transitionButton = null;
   const [width, setWidth] = useState(window.screen.width);
   const width1 = window.innerWidth
+  useEffect(()=>{
+    gsap.to('.scroll',{opacity: 1, duration: 2})
+  },[])
   //Scroll trigger animation 
   useLayoutEffect(()=>{
     let ctx = gsap.context(()=>{
@@ -35,6 +38,10 @@ function About() {
       tl.to('.line-1', {
         y: -100,
         opacity: 0,
+      })
+      tl.to(".scroll", {
+        opacity: 0,
+        y: -100,
       })
       tl.from(".card", {
         opacity: 0,
@@ -114,8 +121,8 @@ function About() {
           </div>
           <div className='details-part2 full-screen'>
             <div className='card'>
-<p className='description-about'>I am a passionate college student based in <b style={{color:"rgb(78, 133, 222)", letterSpacing:"4px"}}>Tunisia</b><Tunisia/>, currently pursuing a degree in <b style={{color:"rgb(87, 245, 247)",paddingRight:"5px"}}>Computer Science</b><Computer/>. Beyond my academic pursuits, I lead a dynamic lifestyle filled with diverse interests and experiences.
-Exploring the great outdoors is another cherished aspect of my life as I have a profound affection for <b style={{color:"rgb(83, 125, 75)"}}>Camping</b> <CampingTent/> and <b style={{color:"rgb(81, 109, 252)"}}>Traveling</b> <Travel/>.</p>
+<p className='description-about'>I am a passionate college student based in Tunisia, currently pursuing a degree in Computer Science. Beyond my academic pursuits, I lead a dynamic lifestyle filled with diverse interests and experiences.
+Exploring the great outdoors is another cherished aspect of my life as I have a profound affection for Camping and Traveling.</p>
             <button className='transition-button' id='transition-button' onClick={transitionHandler}>Projects</button>
             </div>
           </div>

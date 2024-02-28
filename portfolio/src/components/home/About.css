@@ -9,7 +9,6 @@
     align-items: center;
 }
 .description-about{
-    font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-size: 135%;
     line-height: 3rem;
@@ -19,6 +18,7 @@
     padding-bottom: 0;
 }
 .About{
+    max-height: 180vh!important;
     background-color: black !important;
     overflow: hidden;
 }
@@ -51,11 +51,11 @@ nav {
 }
 .card{
     position: absolute;
-    top: 10px;
+    top: 1rem;
     right: 1;
     text-align: center;
     letter-spacing: 2px;
-    color: white !important;
+    color: rgb(171, 168, 168) !important;
     z-index: 99;
     border-radius: 10px;
     width: 70%;
@@ -81,11 +81,10 @@ nav {
     margin-top: 2rem;
     letter-spacing: 3px;
     color: rgb(171, 168, 168);
-    animation: displayBlock 7s ease-in;
+    opacity: 0;
     margin-bottom: 20%;
 }
 .card .transition-button{
-    font-family: 'Ubuntu', sans-serif;
     background-color: white;
     height: 3rem;
     text-align: center;
