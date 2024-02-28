@@ -19,24 +19,8 @@
     padding-bottom: 0;
 }
 .About{
-    max-height: 180vh !important;
     background-color: black !important;
     overflow: hidden;
-}
-.card{
-    text-align: center;
-    letter-spacing: 2px;
-    color: white !important;
-    z-index: 99;
-    border-radius: 10px;
-    width: 70%;
-    height: 100vh;
-    background-color: rgb(11, 11, 11);
-    -webkit-box-shadow: 0px 0px 208px 0px rgba(255,255,255,0.8);
--moz-box-shadow: 0px 0px 208px 0px rgba(255,255,255,0.8);
-box-shadow: 0px 0px 1208px 0px rgba(255,255,255,0.8);
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 .details-part2{
     margin-bottom: 0;
@@ -55,6 +39,7 @@ nav {
     width: 100% !important;
   }
 .line-1{
+    position: relative;
     letter-spacing: 10px;
     color: rgb(171, 168, 168);
     width: 20.18em;
@@ -63,6 +48,20 @@ nav {
     font-size: 180%;
     white-space: nowrap;
     overflow: hidden;
+}
+.card{
+    position: absolute;
+    top: 10px;
+    right: 1;
+    text-align: center;
+    letter-spacing: 2px;
+    color: white !important;
+    z-index: 99;
+    border-radius: 10px;
+    width: 70%;
+    height: 100vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 .line-2{
     letter-spacing: 5px;

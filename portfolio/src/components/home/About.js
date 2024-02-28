@@ -36,9 +36,8 @@ function About() {
         y: -100,
         opacity: 0,
       })
-      tl.to(".card", {
-        opacity: 1,
-        y: -550,
+      tl.from(".card", {
+        opacity: 0,
         delay: -600
       })
       tl.from('#transition-button', {opacity: 0})
@@ -115,8 +114,6 @@ function About() {
           </div>
           <div className='details-part2 full-screen'>
             <div className='card'>
-              <h1 className='hello'>Welcome to my Portfolio!</h1>
-
 <p className='description-about'>I am a passionate college student based in <b style={{color:"rgb(78, 133, 222)", letterSpacing:"4px"}}>Tunisia</b><Tunisia/>, currently pursuing a degree in <b style={{color:"rgb(87, 245, 247)",paddingRight:"5px"}}>Computer Science</b><Computer/>. Beyond my academic pursuits, I lead a dynamic lifestyle filled with diverse interests and experiences.
 Exploring the great outdoors is another cherished aspect of my life as I have a profound affection for <b style={{color:"rgb(83, 125, 75)"}}>Camping</b> <CampingTent/> and <b style={{color:"rgb(81, 109, 252)"}}>Traveling</b> <Travel/>.</p>
             <button className='transition-button' id='transition-button' onClick={transitionHandler}>Projects</button>
