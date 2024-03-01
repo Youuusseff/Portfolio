@@ -8,23 +8,15 @@
     justify-content: center;
     align-items: center;
 }
-.description-about{
-    font-weight: 700;
-    font-size: 135%;
-    line-height: 3rem;
-    letter-spacing: 3px;
-    padding: 2rem 7%;
-    margin-top: 1rem;
-    padding-bottom: 0;
-}
 .About{
-    max-height: 180vh!important;
+    max-height: 198vh!important;
     background-color: black !important;
     overflow: hidden;
 }
 .details-part2{
     margin-bottom: 0;
 }
+
 .hello{
     margin-top: 2rem;
     padding-top: 2rem;
@@ -37,7 +29,7 @@ nav {
     position: sticky !important;
     top: 20px !important;
     width: 100% !important;
-  }
+}
 .line-1{
     position: relative;
     letter-spacing: 10px;
@@ -49,10 +41,21 @@ nav {
     white-space: nowrap;
     overflow: hidden;
 }
+.center {
+    position: absolute !important;
+    top: 1rem !important;
+    right: 0 !important;
+}
+.description-about{
+    font-weight: 700;
+    font-size: 135%;
+    line-height: 3rem;
+    letter-spacing: 3px;
+    padding: 2rem 7%;
+    margin-top: 1rem;
+    padding-bottom: 0;
+}
 .card{
-    position: absolute;
-    top: 1rem;
-    right: 1;
     text-align: center;
     letter-spacing: 2px;
     color: rgb(171, 168, 168) !important;
@@ -90,12 +93,14 @@ nav {
     text-align: center;
     line-height: 0;
     color: rgb(46, 45, 45);
-    position: relative;
-    top: -10%;
     letter-spacing: 2px;
 }
 .card .transition-button:hover{
     animation: none !important;;
+}
+.t-button{
+    margin-top: 5rem;
+    opacity: 0;
 }
 @keyframes displayBlock {
     from{
@@ -156,6 +161,9 @@ nav {
         letter-spacing: 3px;
         font-weight: 400;
         padding-top: 1rem;
+    }
+    .center {
+        margin-top: 8rem;
     }
     @keyframes typewriter{
         from{

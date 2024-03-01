@@ -29,7 +29,7 @@ function About() {
         },
         scrollTrigger: {
           trigger: ".line-1",
-          start: width1>850? "-700%": "-1099%",
+          start: width1>850? "-700%": "-1100%",
           end: "+=100%",
           pin: ".details",
           scrub: true
@@ -59,7 +59,11 @@ function About() {
         opacity: 0,
         y: -100
       })
-      tl.from('#transition-button', {opacity: 0})
+      tl.to('.t-button', {
+        xPercent: width1>850?-350:-50,
+        opacity: 1,
+        delay: -600,
+      })
     })
     return () => ctx.revert(); // <-- cleanup!
   },[])
@@ -133,9 +137,9 @@ function About() {
           </div>
           <div className='details-part2 full-screen'>
             <div className='card'>
-<p className='description-about part-1'>I am a passionate college student based in Tunisia, currently pursuing a degree in Computer Science.</p> <p className='part-2'> Beyond my academic pursuits, I lead a dynamic lifestyle filled with diverse interests and experiences.
+<p className='description-about part-1 center'>I am a passionate college student based in Tunisia, currently pursuing a degree in Computer Science.</p> <p className='description-about part-2 center'> Beyond my academic pursuits, I lead a dynamic lifestyle filled with diverse interests and experiences.
 Exploring the great outdoors is another cherished aspect of my life as I have a profound affection for Camping and Traveling.</p>
-            <button className='transition-button' id='transition-button' onClick={transitionHandler}>Projects</button>
+            <div className='center t-button'><button className='transition-button' id='transition-button' onClick={transitionHandler}>Projects</button></div>
             </div>
           </div>
         </div>
