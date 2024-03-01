@@ -13,8 +13,8 @@ function Projects() {
         document.documentElement.scrollTop = 0;
         gsap.set(".Projects", {opacity:0});
         const tl = gsap.timeline();
-        tl.to(".Projects", {duration: 1, opacity: 1, scale: 1.05, ease: 'power1.in'});
-        tl.to(".Projects", {duration : 1, scale: 1, y: 10});}
+        tl.to(".Projects", {duration: 1, opacity: 1, scale: 1.02, ease: 'power1.in'});
+        tl.to(".Projects", {duration : 2, scale: 1, y: 10});}
       ,[]);
   return (
     <div className='Projects'>

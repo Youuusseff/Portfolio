@@ -59,6 +59,14 @@ function About() {
         opacity: 0,
         y: -100
       })
+      tl.from(".part-3", {
+        opacity: 0,
+        delay: -600
+      })
+      tl.to(".part-3", {
+        opacity: 0,
+        y: -100
+      })
       tl.to('.t-button', {
         xPercent: width1>850?-350:-60,
         opacity: 1,
@@ -77,11 +85,9 @@ function About() {
       },
       (context) => {
         const tl = gsap.timeline();
-        tl.to(".scroll", {opacity: 0, duration:0})
-        tl.to('.card',{ yPercent: 10,opacity: 0.4, duration: 1})
-        tl.to('.card',{
+        tl.to('.About',{
           duration: 2,
-          yPercent: -100,
+          xPercent: -100,
           opacity: 0,
           ease: 'power2.in',
           onComplete: ()=>{history("/projects")}
@@ -109,7 +115,7 @@ function About() {
           <div className='details-part2 full-screen'>
             <div className='card'>
 <p className='description-about part-1 center'>I am a passionate college student based in Tunisia, currently pursuing a degree in Computer Science.</p> <p className='description-about part-2 center'> Beyond my academic pursuits, I lead a dynamic lifestyle filled with diverse interests and experiences.
-Exploring the great outdoors is another cherished aspect of my life as I have a profound affection for Camping and Traveling.</p>
+</p><p className='description-about part-3 center'>Exploring the great outdoors is another cherished aspect of my life as I have a profound affection for Camping and Traveling.</p>
             <div className='center t-button'><button className='transition-button' id='transition-button' onClick={transitionHandler}>Projects</button></div>
             </div>
           </div>
