@@ -60,42 +60,13 @@ function About() {
         y: -100
       })
       tl.to('.t-button', {
-        xPercent: width1>850?-350:-50,
+        xPercent: width1>850?-350:-60,
         opacity: 1,
         delay: -600,
       })
     })
     return () => ctx.revert(); // <-- cleanup!
   },[])
-  // it keep track of the width which i need to switch the transition button to a simple narrow to make it better
-  // responsive
-  useEffect(() => {
-    const updateWindowDimensions = () => {
-      const newWidth = window.innerWidth;
-      setWidth(newWidth);
-      console.log("updating width");
-    };
-
-    window.addEventListener("resize", updateWindowDimensions);
-
-    return () => window.removeEventListener("resize", updateWindowDimensions) 
-
-  }, []);
-
-  // js to change the transition button text to a simple narrow when width of screen reaches 950
-
-  useEffect(()=>{
-    if(width < 950){
-      transitionButton = document.getElementById("transition-button");
-      transitionButton.className = "narrow";
-      transitionButton.innerText = "↓";
-    }
-    else{
-      transitionButton = document.getElementById("transition-button");
-      transitionButton.className = "transition-button";
-      transitionButton.innerText = "Projects";
-    }
-  },[width])
   function transitionHandler(){
     let mm1 = gsap.matchMedia(),
       breakPoint = 950;
