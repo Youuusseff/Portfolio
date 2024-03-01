@@ -8,39 +8,15 @@
     justify-content: center;
     align-items: center;
 }
-.description-about{
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
-    font-size: 135%;
-    line-height: 3rem;
-    letter-spacing: 3px;
-    padding: 2rem 7%;
-    margin-top: 1rem;
-    padding-bottom: 0;
-}
 .About{
-    max-height: 180vh !important;
+    max-height: 198vh!important;
     background-color: black !important;
     overflow: hidden;
-}
-.card{
-    text-align: center;
-    letter-spacing: 2px;
-    color: white !important;
-    z-index: 99;
-    border-radius: 10px;
-    width: 70%;
-    height: 100vh;
-    background-color: rgb(11, 11, 11);
-    -webkit-box-shadow: 0px 0px 208px 0px rgba(255,255,255,0.8);
--moz-box-shadow: 0px 0px 208px 0px rgba(255,255,255,0.8);
-box-shadow: 0px 0px 1208px 0px rgba(255,255,255,0.8);
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 .details-part2{
     margin-bottom: 0;
 }
+
 .hello{
     margin-top: 2rem;
     padding-top: 2rem;
@@ -53,8 +29,9 @@ nav {
     position: sticky !important;
     top: 20px !important;
     width: 100% !important;
-  }
+}
 .line-1{
+    position: relative;
     letter-spacing: 10px;
     color: rgb(171, 168, 168);
     width: 20.18em;
@@ -63,6 +40,31 @@ nav {
     font-size: 180%;
     white-space: nowrap;
     overflow: hidden;
+}
+.center {
+    position: absolute !important;
+    top: 1rem !important;
+    right: 0 !important;
+}
+.description-about{
+    font-weight: 700;
+    font-size: 135%;
+    line-height: 3rem;
+    letter-spacing: 3px;
+    padding: 2rem 7%;
+    margin-top: 1rem;
+    padding-bottom: 0;
+}
+.card{
+    text-align: center;
+    letter-spacing: 2px;
+    color: rgb(171, 168, 168) !important;
+    z-index: 99;
+    border-radius: 10px;
+    width: 70%;
+    height: 100vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 .line-2{
     letter-spacing: 5px;
@@ -82,22 +84,23 @@ nav {
     margin-top: 2rem;
     letter-spacing: 3px;
     color: rgb(171, 168, 168);
-    animation: displayBlock 7s ease-in;
+    opacity: 0;
     margin-bottom: 20%;
 }
 .card .transition-button{
-    font-family: 'Ubuntu', sans-serif;
     background-color: white;
     height: 3rem;
     text-align: center;
     line-height: 0;
     color: rgb(46, 45, 45);
-    position: relative;
-    top: -10%;
     letter-spacing: 2px;
 }
 .card .transition-button:hover{
     animation: none !important;;
+}
+.t-button{
+    margin-top: 5rem;
+    opacity: 0;
 }
 @keyframes displayBlock {
     from{
@@ -158,6 +161,9 @@ nav {
         letter-spacing: 3px;
         font-weight: 400;
         padding-top: 1rem;
+    }
+    .center {
+        margin-top: 8rem;
     }
     @keyframes typewriter{
         from{
