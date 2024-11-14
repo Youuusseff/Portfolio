@@ -35,7 +35,7 @@ function Projects() {
                             <div className='tool'>JWT</div>
                         </div>
                         <div className='card-buttons'>
-                            <a href='https://github.com/Youuusseff/Todoapp' target='_blank' rel='noopener noreferrer'><button className="card-button button-c" role="button">Github</button></a>
+                            <a href='https://github.com/Youuusseff/JWT_TodoApp' target='_blank' rel='noopener noreferrer'><button className="card-button button-c" role="button">Github</button></a>
                             <a href='#/projects' rel='noopener noreferrer'><button className="card-button button-l" role="button">Live Demo</button></a>
                         </div>
                     </div>
